@@ -5,3 +5,7 @@
 /SchoolRegister/.vs/SchoolRegister
 /SchoolRegister/SchoolRegister/bin/Debug/netcoreapp3.1
 /SchoolRegister/SchoolRegister/obj
+/SchoolRegister/SchoolRegister.Domain/bin/Debug/netstandard2.0
+/SchoolRegister/SchoolRegister.Domain/obj
+/SchoolRegister/SchoolRegister.Repository/bin/Debug/netstandard2.0
+/SchoolRegister/SchoolRegister.Repository/obj

@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SchoolRegister.Repository;
 
 namespace SchoolRegister
 {
@@ -26,6 +28,10 @@ namespace SchoolRegister
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<SchoolRegisterContext>(options =>
+            {
+                options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SchoolRegister;Integrated Security=True;Connect Timeout=30;");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
